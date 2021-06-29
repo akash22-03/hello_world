@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>
+            Rookie
+        </title>
+        <style type = "text/css">
+        #hello
+        {
+            background-color: black;
+            color: white;
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+        }
+        h1
+        {
+            text-align: center;
+            position: relative;
+            top:42%;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="hello">
+            <h1>Hello World.!</h1>
+        </div>
+        <script type = "text/javascript" >
+            function getRandomColor()
+            {
+                var letters = "0123456789ABCDEF".split("");
+                var color = '#';
+                for(var i=0; i<6; i++)
+                {
+                color+= letters[Math.floor(Math.random()*16)];
+                }
+                return color;
+            }
+            function changeColor()
+            {
+                document.getElementById("hello").style.backgroundColor = getRandomColor();
+            }
+            setInterval(changeColor,100);
+        </script>
+    </body>
+</html>
